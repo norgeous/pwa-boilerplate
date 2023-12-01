@@ -1,0 +1,29 @@
+{
+  "name": "pwa",
+  "version": "0.0.0",
+  "private": true,
+  "author": "Daniel Harte",
+  "engines": {
+    "node": ">=20.1.0",
+    "npm": ">=9.6.6"
+  },
+  "workspaces": [
+    "packages/*",
+    "themes"
+  ],
+  "scripts": {
+    "prepare": "husky install",
+    "dev": "npm run dev -w packages/server",
+    "prod": "npm run build -w packages/server && npm run start -w packages/server",
+    "outdated": "npm outdated",
+    "lint": "eslint . --fix && prettier --loglevel silent --write \"**/*.{js,mdx,md,json}\""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "husky": "^8.0.3"
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix",
+    "*.{js,mdx,md,json}": "prettier --loglevel silent --write"
+  }
+}
