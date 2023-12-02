@@ -43,10 +43,10 @@ export default [
       '@typescript-eslint': pluginTsEslint,
       ts: pluginTsEslint,
     },
-    ignorePatterns: ['dist'],
+    ignores: ['dist'],
     rules: {
       ...pluginTsEslint.configs['eslint-recommended'].rules,
-      ...pluginTsEslint.configs['recommended'].rules,
+      ...pluginTsEslint.configs.recommended.rules,
 
       'react/jsx-filename-extension': 'off',
       'import/extensions': 'off',
