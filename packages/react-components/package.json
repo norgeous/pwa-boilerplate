@@ -1,19 +1,15 @@
 {
   "name": "@pwa/react-components",
   "version": "0.0.0",
-  "scripts": {
-    "build": "tsc"
-  },
   "exports": {
-    "./Button2": {
-      "import": {
-        "types": "./dist/Button/Button.d.ts",
-        "default": "./dist/Button/Button.js"
-      }
-    },
     "./util": {
       "import": "./src/util.ts"
+    },
+    "./Button": {
+      "import": "./src/Button/Button.tsx"
     }
   },
-  "dependencies": {}
+  "dependencies": {
+    "styled-components": "^6.1.1"
+  }
 }
