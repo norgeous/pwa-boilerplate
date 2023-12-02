@@ -1,3 +1,3 @@
-import eslintConfig from '@pwa/eslint-config/eslint.config';
+import eslintConfig from '@pwa/lint-config/eslint.config';
 
 export default eslintConfig;

@@ -1,3 +1,3 @@
-import prettierConfig from '@pwa/eslint-config/prettier.config';
+import prettierConfig from '@pwa/lint-config/prettier.config';
 
 export default prettierConfig;

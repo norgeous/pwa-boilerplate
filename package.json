@@ -21,11 +21,11 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@pwa/eslint-config": "*",
+    "@pwa/lint-config": "*",
     "husky": "^8.0.3"
   },
   "lint-staged": {
-    "*.js": "eslint --fix",
-    "*.{js,mdx,md,json}": "prettier --loglevel silent --write"
+    "*.js,*.ts": "eslint --fix",
+    "*.{js,ts,mdx,md,json}": "prettier --log-level silent --write"
   }
 }
