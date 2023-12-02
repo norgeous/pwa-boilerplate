@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@pwa/react": "*",
+    "@pwa/react-components": "*",
     "@pwa/vite-config": "*"
   }
 }

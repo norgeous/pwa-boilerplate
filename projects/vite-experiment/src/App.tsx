@@ -3,6 +3,8 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 
+import Button from '@pwa/react-components/Button';
+
 const App = () => {
   const [count, setCount] = useState(0);
 
@@ -17,8 +19,13 @@ const App = () => {
         </a>
       </div>
       <h1>Vite + React</h1>
+      <Button>PWABUTTON</Button>
       <div className="card">
-        <button onClick={() => { setCount(oldCount => oldCount + 1); }}>
+        <button
+          onClick={() => {
+            setCount(oldCount => oldCount + 1);
+          }}
+        >
           count is {count}
         </button>
         <p>
