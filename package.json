@@ -1,0 +1,34 @@
+{
+  "name": "pwa",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "author": "Daniel Harte",
+  "engines": {
+    "node": ">=20.1.0",
+    "npm": ">=9.6.6"
+  },
+  "workspaces": [
+    "packages/*",
+    "projects/*"
+  ],
+  "scripts": {
+    "prepare": "husky install",
+    "dev": "npm i && npm run dev -w projects/vite-experiment",
+    "build": "npm run build -w projects/vite-experiment",
+    "build:preview": "npm run build:preview -w projects/vite-experiment",
+    "outdated": "npm outdated",
+    "lint": "eslint . --fix && prettier --log-level silent --write \"**/*.{js,mdx,md,json,yml}\" && tsc"
+  },
+  "dependencies": {
+    "eslint-plugin-functional": "^6.0.0"
+  },
+  "devDependencies": {
+    "@pwa/lint-config": "*",
+    "husky": "^8.0.3"
+  },
+  "lint-staged": {
+    "*.js,*.ts": "eslint --fix",
+    "*.{js,ts,mdx,md,json,yml}": "prettier --log-level silent --write"
+  }
+}

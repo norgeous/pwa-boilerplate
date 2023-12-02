@@ -1,0 +1,16 @@
+{
+  "name": "@pwa/react-components",
+  "version": "0.0.0",
+  "exports": {
+    "./util": {
+      "import": "./src/util.ts"
+    },
+    "./Button": {
+      "import": "./src/Button/Button.tsx"
+    }
+  },
+  "dependencies": {
+    "react-icons": "^4.12.0",
+    "styled-components": "^6.1.1"
+  }
+}
