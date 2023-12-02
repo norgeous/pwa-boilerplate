@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
-export const ButtonBase = styled.button`
+export interface ButtonBaseProps {
+  isLoading: boolean;
+}
+export const ButtonBase = styled.button<ButtonBaseProps>`
   color: inherit;
   font-size: var(--font-size-input);
   padding: var(--gap-sm) var(--gap-md);
@@ -17,4 +20,5 @@ export const ButtonBase = styled.button`
   text-decoration: none;
   box-sizing: border-box;
   background: red;
+  cursor: ${({ isLoading }) => (isLoading ? 'wait' : 'pointer')};
 `;
