@@ -13,7 +13,7 @@
   ],
   "scripts": {
     "prepare": "husky install",
-    "dev": "npm run dev -w packages/server",
+    "dev": "npm run dev -w packages/vite-experiment",
     "prod": "npm run build -w packages/server && npm run start -w packages/server",
     "outdated": "npm outdated",
     "lint": "eslint . --fix && prettier --loglevel silent --write \"**/*.{js,mdx,md,json}\""
