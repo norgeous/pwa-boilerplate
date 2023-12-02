@@ -15,7 +15,7 @@
   "scripts": {
     "prepare": "husky install",
     "dev": "npm i && npm run dev -w projects/vite-experiment",
-    "build": "npm run build -w projects/vite-experiment",
+    "build": "npm i && npm run build -w projects/vite-experiment",
     "build:preview": "npm run build:preview -w projects/vite-experiment",
     "outdated": "npm outdated",
     "lint": "eslint . --fix && prettier --log-level silent --write \"**/*.{js,mdx,md,json,yml}\" && tsc"
