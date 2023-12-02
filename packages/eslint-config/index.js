@@ -2,13 +2,13 @@ module.exports = {
   env: {
     browser: true,
     node: true,
+    es2020: true,
   },
   parserOptions: {
     ecmaVersion: 'latest',
   },
   extends: ['eslint:recommended', 'airbnb', 'prettier'],
-  plugins: ['prettier', 'import', 'jsx-a11y', 'react', 'react-hooks'],
-  ignorePatterns: ['storybook-static', 'visdiff-report'],
+  plugins: ['prettier', 'import', 'jsx-a11y', 'react', 'react-hooks', 'react-refresh'],
   rules: {
     'react/jsx-filename-extension': 'off',
     'import/extensions': 'off',
@@ -33,5 +33,11 @@ module.exports = {
 
     // https://github.com/import-js/eslint-plugin-import/issues/1302#issuecomment-572546519
     'import/no-extraneous-dependencies': ['off'],
+
+    // added by vite
+    'react-refresh/only-export-components': [
+      'warn',
+      { allowConstantExport: true },
+    ],
   },
 };
