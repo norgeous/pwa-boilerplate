@@ -5,7 +5,7 @@ eslint configured for react + prettier
 ## installation
 
 ```sh
-npm i @pwa/eslint-config
+npm i -D @pwa/eslint-config
 ```
 
 create the `eslint.config.js` beside the `package.json`

@@ -1,3 +1,5 @@
+import { FlatCompat } from '@eslint/eslintrc';
+import js from '@eslint/js';
 // import airbnb from 'eslint-config-airbnb';
 // import prettier from 'eslint-config-prettier';
 import pluginPrettier from 'eslint-plugin-prettier';
@@ -7,36 +9,27 @@ import pluginReactHooks from 'eslint-plugin-react-hooks';
 import pluginImport from 'eslint-plugin-import';
 import pluginJsxA11y from 'eslint-plugin-jsx-a11y';
 
+const compat = new FlatCompat();
+
 export default [
+  js.configs.recommended,
+  ...compat.extends('eslint-config-airbnb'),
+  ...compat.extends('eslint-config-prettier'),
   // airbnb,
   // prettier,
   {
-    // env: {
-    //   browser: true,
-    //   node: true,
-    //   es2020: true,
-    // },
     languageOptions: {
       parserOptions: {
         ecmaVersion: 'latest',
       },
     },
-    // extends: ["eslint:recommended", "airbnb", "prettier"],
-    // plugins: [
-    //   "prettier",
-    //   "import",
-    //   "jsx-a11y",
-    //   "react",
-    //   "react-hooks",
-    //   "react-refresh",
-    // ],
     plugins: {
       prettier: pluginPrettier,
       import: pluginImport,
       'jsx-a11y': pluginJsxA11y,
       react: pluginReact,
-      'react-refresh': pluginReactRefresh,
       'react-hooks': pluginReactHooks,
+      'react-refresh': pluginReactRefresh,
     },
     rules: {
       'react/jsx-filename-extension': 'off',
@@ -58,7 +51,10 @@ export default [
 
       // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/boolean-prop-naming.md
       // this forces bool proptypes to be prefixed with "is" or "has"
-      'react/boolean-prop-naming': 'error',
+      'react/boolean-prop-naming': [
+        'error',
+        { rule: '^(is|has)[A-Z]([A-Za-z0-9]?)+' },
+      ],
 
       // https://github.com/import-js/eslint-plugin-import/issues/1302#issuecomment-572546519
       'import/no-extraneous-dependencies': ['off'],

@@ -2,8 +2,12 @@
   "name": "@pwa/eslint-config",
   "version": "0.0.0",
   "type": "module",
-  "main": "index.js",
+  "exports": {
+    "./eslint.config": "./eslint.config.js",
+    "./prettier.config": "./prettier.config.js"
+  },
   "dependencies": {
+    "@eslint/eslintrc": "^2.1.4",
     "eslint": "^8.53.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^9.0.0",
