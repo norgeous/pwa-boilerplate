@@ -1,6 +1,7 @@
 {
   "name": "pwa",
   "version": "0.0.0",
+  "type": "module",
   "private": true,
   "author": "Daniel Harte",
   "engines": {
@@ -16,7 +17,8 @@
     "dev": "npm run dev -w packages/vite-experiment",
     "prod": "npm run build -w packages/server && npm run start -w packages/server",
     "outdated": "npm outdated",
-    "lint": "eslint . --fix && prettier --loglevel silent --write \"**/*.{js,mdx,md,json}\""
+    "lint": "eslint . --fix && prettier --log-level silent --write \"**/*.{js,mdx,md,json}\"",
+    "prttier": "prettier --log-level silent --write \"**/*.{js,mdx,md,json}\""
   },
   "dependencies": {},
   "devDependencies": {
