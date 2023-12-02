@@ -15,9 +15,10 @@
   "scripts": {
     "prepare": "husky install",
     "dev": "npm i && npm run dev -w projects/vite-experiment",
-    "prod": "npm run build -w packages/server && npm run start -w packages/server",
+    "build": "npm run build -w projects/vite-experiment",
+    "build:preview": "npm run build:preview -w projects/vite-experiment",
     "outdated": "npm outdated",
-    "lint": "eslint . --fix && prettier --log-level silent --write \"**/*.{js,mdx,md,json}\" && tsc"
+    "lint": "eslint . --fix && prettier --log-level silent --write \"**/*.{js,mdx,md,json,yml}\" && tsc"
   },
   "dependencies": {
     "eslint-plugin-functional": "^6.0.0"
@@ -28,6 +29,6 @@
   },
   "lint-staged": {
     "*.js,*.ts": "eslint --fix",
-    "*.{js,ts,mdx,md,json}": "prettier --log-level silent --write"
+    "*.{js,ts,mdx,md,json,yml}": "prettier --log-level silent --write"
   }
 }
