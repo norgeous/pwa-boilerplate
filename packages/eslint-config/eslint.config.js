@@ -2,25 +2,34 @@ import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
 // import airbnb from 'eslint-config-airbnb';
 // import prettier from 'eslint-config-prettier';
+// import tsesreco from '@typescript-eslint/eslint-recommended';
 import pluginPrettier from 'eslint-plugin-prettier';
 import pluginReact from 'eslint-plugin-react';
 import pluginReactRefresh from 'eslint-plugin-react-refresh';
 import pluginReactHooks from 'eslint-plugin-react-hooks';
 import pluginImport from 'eslint-plugin-import';
 import pluginJsxA11y from 'eslint-plugin-jsx-a11y';
+import pluginTsEslint from '@typescript-eslint/eslint-plugin';
+
+import tsParser from '@typescript-eslint/parser';
 
 const compat = new FlatCompat();
 
 export default [
   js.configs.recommended,
-  ...compat.extends('eslint-config-airbnb'),
+  ...compat.extends('eslint-config-airbnb-typescript'),
   ...compat.extends('eslint-config-prettier'),
+  // ...compat.extends('@typescript-eslint/eslint-recommended'),
+
   // airbnb,
   // prettier,
+  // tsesreco,
   {
     languageOptions: {
+      parser: tsParser,
       parserOptions: {
         ecmaVersion: 'latest',
+        project: './packages/eslint-config/tsconfig.json',
       },
     },
     plugins: {
@@ -30,6 +39,7 @@ export default [
       react: pluginReact,
       'react-hooks': pluginReactHooks,
       'react-refresh': pluginReactRefresh,
+      '@typescript-eslint': pluginTsEslint,
     },
     rules: {
       'react/jsx-filename-extension': 'off',
