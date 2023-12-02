@@ -1,7 +1,6 @@
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
-// import airbnb from 'eslint-config-airbnb';
-// import prettier from 'eslint-config-prettier';
+
 import pluginPrettier from 'eslint-plugin-prettier';
 import pluginReact from 'eslint-plugin-react';
 import pluginReactRefresh from 'eslint-plugin-react-refresh';
@@ -24,11 +23,12 @@ export default [
   // prettier,
   // tsesreco,
   {
+    // files: ['**/*.ts'],
     languageOptions: {
       parser: tsParser,
       parserOptions: {
-        ecmaFeatures: { modules: true },
         ecmaVersion: 'latest',
+        ecmaFeatures: { modules: true },
         project: './tsconfig.json',
       },
     },
@@ -44,12 +44,14 @@ export default [
       ts: pluginTsEslint,
     },
     ignores: ['dist'],
+    settings: {
+      react: { version: 'detect' },
+    },
     rules: {
       ...pluginTsEslint.configs['eslint-recommended'].rules,
       ...pluginTsEslint.configs.recommended.rules,
 
-      'react/jsx-filename-extension': 'off',
-      'import/extensions': 'off',
+      'react/jsx-filename-extension': 'off', // dont use jsx files
 
       // https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint
       'react/jsx-uses-react': 'off',
@@ -74,6 +76,7 @@ export default [
 
       // https://github.com/import-js/eslint-plugin-import/issues/1302#issuecomment-572546519
       'import/no-extraneous-dependencies': ['off'],
+      'import/extensions': 'off',
 
       // added by vite
       'react-refresh/only-export-components': [
@@ -82,4 +85,11 @@ export default [
       ],
     },
   },
+  // {
+  //   files: ['**/*.js'],
+  //   ignores: ['**/*.test.js'],
+  //   settings: {
+  //     react: { version: 'detect' },
+  //   },
+  // },
 ];

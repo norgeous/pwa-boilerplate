@@ -18,7 +18,7 @@ const App = () => {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount(oldCount => oldCount + 1)}>
+        <button onClick={() => { setCount(oldCount => oldCount + 1); }}>
           count is {count}
         </button>
         <p>
