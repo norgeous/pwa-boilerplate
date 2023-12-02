@@ -1,3 +1,5 @@
+import { ButtonBase } from './Button.styles.ts';
+
 /**
  * Button component
  * Marshmallow bear claw tootsie roll chupa chups ice cream ice cream candy.
@@ -6,7 +8,7 @@
  * Marshmallow muffin lollipop marzipan cupcake oat cake. Sesame snaps chocolate lollipop jelly-o shortbread halvah.
  */
 const Button = ({ children }: { children: React.ReactNode }) => {
-  return <button>RCB {children}</button>;
+  return <ButtonBase>RCB {children}</ButtonBase>;
 };
 
 export default Button;
