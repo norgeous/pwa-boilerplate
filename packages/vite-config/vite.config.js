@@ -8,11 +8,11 @@ export default defineConfig({
 
   // @pwa/react-components exports jsx content with .js file extention
   // there is a performance penality for doing this
-  optimizeDeps: {
-    esbuildOptions: {
-      loader: {
-        '.js': 'jsx',
-      },
-    },
-  },
+  // optimizeDeps: {
+  //   esbuildOptions: {
+  //     loader: {
+  //       '.js': 'jsx',
+  //     },
+  //   },
+  // },
 });

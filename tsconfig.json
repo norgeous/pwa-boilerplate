@@ -3,19 +3,16 @@
     "target": "ES2020",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "NodeNext",
+    "module": "ES2022",
     "skipLibCheck": true,
 
     /* Bundler mode */
-    // "moduleResolution": "bundler",
-    "moduleResolution": "nodenext",
+    "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-
-    "declaration": true, // create .d.ts when compiling
 
     /* Linting */
     "strict": true,

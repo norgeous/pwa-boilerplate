@@ -1,11 +1,10 @@
-import Button, { variants } from './Button';
+import Button from './Button.tsx';
 
 export default {
   title: 'Components/Button',
   component: Button,
   tags: ['autodocs'],
   argTypes: {
-    variant: { control: 'select', options: variants },
     onClick: { action: true },
   },
 };
