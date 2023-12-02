@@ -10,6 +10,9 @@
         "types": "./dist/Button/Button.d.ts",
         "default": "./dist/Button/Button.js"
       }
+    },
+    "./util": {
+      "import": "./src/util.ts"
     }
   },
   "dependencies": {}

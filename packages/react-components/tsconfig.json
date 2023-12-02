@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es2019",
     "module": "ESNext",
-    "moduleResolution": "bundler",
+    // "moduleResolution": "bundler",
     "jsx": "react-jsx",
     "allowImportingTsExtensions": true,
     "noEmit": true,

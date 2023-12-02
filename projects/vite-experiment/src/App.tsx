@@ -2,9 +2,12 @@ import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 
-import Button from '@pwa/react-components/Button2';
+// import Button from '@pwa/react-components/Button2';
+import util from '@pwa/react-components/util';
 
 import './App.css';
+
+console.log(util(100));
 
 const App = () => {
   const [count, setCount] = useState(0);
@@ -20,7 +23,7 @@ const App = () => {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <Button>PWABUTTON</Button>
+      {/* <Button>PWABUTTON</Button> */}
       <div className="card">
         <button
           onClick={() => {
