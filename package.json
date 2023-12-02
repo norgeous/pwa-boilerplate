@@ -19,7 +19,9 @@
     "outdated": "npm outdated",
     "lint": "eslint . --fix && prettier --log-level silent --write \"**/*.{js,mdx,md,json}\" && tsc"
   },
-  "dependencies": {},
+  "dependencies": {
+    "eslint-plugin-functional": "^6.0.0"
+  },
   "devDependencies": {
     "@pwa/lint-config": "*",
     "husky": "^8.0.3"
