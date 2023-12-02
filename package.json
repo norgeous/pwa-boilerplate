@@ -20,6 +20,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@pwa/eslint-config": "*",
     "husky": "^8.0.3"
   },
   "lint-staged": {

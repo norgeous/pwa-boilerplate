@@ -1,14 +1,11 @@
-const eslintConfig = require('@pwa/eslint-config');
+const eslintConfig = require("@pwa/eslint-config");
 
 module.exports = {
   ...eslintConfig,
-  parser: '@typescript-eslint/parser',
+  parser: "@typescript-eslint/parser",
   extends: [
-    ...eslintConfig.extends.filter(id => id !== 'airbnb'),
-    'airbnb-typescript',
+    ...eslintConfig.extends.filter((id) => id !== "airbnb"),
+    "airbnb-typescript",
   ],
-  plugins: [
-    ...eslintConfig.plugins,
-    '@typescript-eslint/recommended',
-  ],
+  plugins: [...eslintConfig.plugins, "@typescript-eslint/recommended"],
 };
