@@ -2,8 +2,9 @@ import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
-
+//@ts-ignore
 import Button from '@pwa/react-components/Button';
+// const B = Button as ButtonType;
 
 const App = () => {
   const [count, setCount] = useState(0);

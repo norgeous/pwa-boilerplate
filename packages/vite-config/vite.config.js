@@ -5,14 +5,14 @@ import basicSsl from '@vitejs/plugin-basic-ssl';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [basicSsl(), react()],
-  esbuild: {
-    // loader: 'tsx', // OR "jsx"
-    // include: [
-    //   './**/*.js',
-    //   // "node_modules/**/*.js",
-    //   './**/*.ts',
-    //   // "node_modules/**/*.ts",
-    // ],
-    // loader: { '.js': 'jsx' },
+
+  // @pwa/react-components exports jsx content with .js file extention
+  // there is a performance penality for doing this
+  optimizeDeps: {
+    esbuildOptions: {
+      loader: {
+        '.js': 'jsx',
+      },
+    },
   },
 });
