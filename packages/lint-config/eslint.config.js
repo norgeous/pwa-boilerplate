@@ -18,12 +18,10 @@ export default [
   js.configs.recommended,
   ...compat.extends('eslint-config-airbnb-typescript'),
   ...compat.extends('eslint-config-prettier'),
-
-  // airbnb,
-  // prettier,
-  // tsesreco,
   {
-    // files: ['**/*.ts'],
+    ignores: ['**/dist'],
+  },
+  {
     languageOptions: {
       parser: tsParser,
       parserOptions: {
@@ -43,7 +41,6 @@ export default [
       '@typescript-eslint': pluginTsEslint,
       ts: pluginTsEslint,
     },
-    ignores: ['dist'],
     settings: {
       react: { version: 'detect' },
     },
@@ -85,11 +82,4 @@ export default [
       ],
     },
   },
-  // {
-  //   files: ['**/*.js'],
-  //   ignores: ['**/*.test.js'],
-  //   settings: {
-  //     react: { version: 'detect' },
-  //   },
-  // },
 ];

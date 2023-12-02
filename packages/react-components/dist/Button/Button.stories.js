@@ -1,25 +1,25 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
 exports.Link = exports.Secondary = exports.Primary = void 0;
-const Button_tsx_1 = require("./Button.tsx");
+const Button_tsx_1 = require('./Button.tsx');
 exports.default = {
-    title: 'Components/Button',
-    component: Button_tsx_1.default,
-    tags: ['autodocs'],
-    argTypes: {
-        onClick: { action: true },
-    },
+  title: 'Components/Button',
+  component: Button_tsx_1.default,
+  tags: ['autodocs'],
+  argTypes: {
+    onClick: { action: true },
+  },
 };
 /**
  * The primary call-to-action
  * - Always uses `--palette-primary` background color
  */
 exports.Primary = {
-    args: {
-        variant: 'primary',
-        isWide: false,
-        children: 'Primary Button',
-    },
+  args: {
+    variant: 'primary',
+    isWide: false,
+    children: 'Primary Button',
+  },
 };
 /**
  * When more than one CTA is present, use a secondary button
@@ -27,10 +27,10 @@ exports.Primary = {
  *
  */
 exports.Secondary = {
-    args: {
-        variant: 'secondary',
-        children: 'Secondary Button',
-    },
+  args: {
+    variant: 'secondary',
+    children: 'Secondary Button',
+  },
 };
 /**
  * aka Ghost button
@@ -39,8 +39,8 @@ exports.Secondary = {
  *   - There is no guarantee the hover state will have sufficient contrast
  * */
 exports.Link = {
-    args: {
-        variant: 'link',
-        children: 'Link Button',
-    },
+  args: {
+    variant: 'link',
+    children: 'Link Button',
+  },
 };
