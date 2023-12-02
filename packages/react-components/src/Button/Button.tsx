@@ -6,7 +6,6 @@
  * Marshmallow muffin lollipop marzipan cupcake oat cake. Sesame snaps chocolate lollipop jelly-o shortbread halvah.
  */
 const Button = ({ children }: { children: React.ReactNode }) => {
-  // return <div>RCB!</div>;
   return <button>RCB {children}</button>;
 };
 
