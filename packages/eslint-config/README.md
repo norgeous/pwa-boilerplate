@@ -11,13 +11,13 @@ npm i -D @pwa/eslint-config
 create the `eslint.config.js` beside the `package.json`
 
 ```js
-import { eslintConfig } from '@pwa/eslint-config';
+import eslintConfig from '@pwa/eslint-config/eslint.config';
 export default eslintConfig;
 ```
 
 create the `prettier.config.js` beside the `package.json`
 
 ```js
-import { prettierConfig } from '@pwa/eslint-config';
+import prettierConfig from '@pwa/eslint-config/prettier.config';
 export default prettierConfig;
 ```
