@@ -16,4 +16,5 @@ export const ButtonBase = styled.button`
   gap: 10px;
   text-decoration: none;
   box-sizing: border-box;
+  background: red;
 `;
