@@ -3,6 +3,9 @@
 import pluginPrettier from 'eslint-plugin-prettier';
 import pluginReact from 'eslint-plugin-react';
 import pluginReactRefresh from 'eslint-plugin-react-refresh';
+import pluginReactHooks from 'eslint-plugin-react-hooks';
+import pluginImport from 'eslint-plugin-import';
+import pluginJsxA11y from 'eslint-plugin-jsx-a11y';
 
 export default [
   // airbnb,
@@ -29,11 +32,11 @@ export default [
     // ],
     plugins: {
       prettier: pluginPrettier,
-      // "import",
-      // "jsx-a11y",
+      import: pluginImport,
+      'jsx-a11y': pluginJsxA11y,
       react: pluginReact,
       'react-refresh': pluginReactRefresh,
-      // "react-hooks",
+      'react-hooks': pluginReactHooks,
     },
     rules: {
       'react/jsx-filename-extension': 'off',

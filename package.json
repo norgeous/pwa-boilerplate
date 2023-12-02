@@ -18,7 +18,6 @@
     "prod": "npm run build -w packages/server && npm run start -w packages/server",
     "outdated": "npm outdated",
     "lint": "eslint . --fix && prettier --log-level silent --write \"**/*.{js,mdx,md,json}\"",
-    "prttier": "prettier --log-level silent --write \"**/*.{js,mdx,md,json}\""
   },
   "dependencies": {},
   "devDependencies": {

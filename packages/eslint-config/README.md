@@ -12,7 +12,7 @@ create the `eslint.config.js` beside the `package.json`
 
 ```js
 import { eslintConfig } from '@pwa/eslint-config';
-export default [eslintConfig];
+export default eslintConfig;
 ```
 
 create the `prettier.config.js` beside the `package.json`
