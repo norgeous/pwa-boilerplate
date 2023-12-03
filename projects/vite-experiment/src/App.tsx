@@ -12,8 +12,8 @@ const App = () => {
 
   return (
     <>
-      <h1>Vite + React</h1>
-      <Button>PWABUTTON</Button>
+      <h1>{import.meta.env.VITE_TITLE}</h1>
+      <Button>Library Button</Button>
       <div className="card">
         <button
           onClick={() => {
@@ -22,9 +22,6 @@ const App = () => {
         >
           count is {count}
         </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
       </div>
     </>
   );
