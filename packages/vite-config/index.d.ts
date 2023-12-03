@@ -1,1 +1,2 @@
-declare module '@pwa/vite-config';
+declare module '@pwa/vite-config/manifestDestiny';
+declare module '@pwa/vite-config/vite.config';
