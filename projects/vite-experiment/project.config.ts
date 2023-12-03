@@ -7,5 +7,5 @@ export default {
   BACKGROUNDCOLOR: '#000',
   TEXTCOLOR: '#FFF',
   EMOJI: '🥵',
-  VERSION: '0.0.0',
+  VERSION: '0.0.0', // TODO: read from package.json
 };
