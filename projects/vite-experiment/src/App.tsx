@@ -22,6 +22,12 @@ const App = () => {
       >
         count is {count}
       </button>
+      <a
+        href="https://github.com/norgeous/pwa-boilerplate/tree/main/projects/vite-experiment"
+        target="_blank"
+      >
+        repo link
+      </a>
     </>
   );
 };
