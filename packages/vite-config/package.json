@@ -2,8 +2,18 @@
   "name": "@pwa/vite-config",
   "version": "0.0.0",
   "type": "module",
-  "main": "./vite.config.js",
   "types": "./index.d.ts",
+  "exports": {
+    "./default-config": {
+      "import": "./default-config.js"
+    },
+    "./plugins": {
+      "import": "./plugins.js"
+    },
+    "./manifestDestiny": {
+      "import": "./manifestDestiny.js"
+    }
+  },
   "dependencies": {
     "vite": "^5.0.0",
     "vite-plugin-transform": "^2.0.1"
