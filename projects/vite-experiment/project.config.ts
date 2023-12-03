@@ -1,4 +1,4 @@
-const projectConfig = {
+export default {
   SHORTNAME: 'Monorepo',
   LONGNAME: 'PWA Monorepo',
   DESCRIPTION: 'Tools for making cool PWAs',
@@ -9,5 +9,3 @@ const projectConfig = {
   EMOJI: '🥵',
   VERSION: '0.0.0',
 };
-
-export default projectConfig;
