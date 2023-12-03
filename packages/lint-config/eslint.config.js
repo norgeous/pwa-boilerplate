@@ -1,3 +1,4 @@
+import globals from 'globals';
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
 
@@ -14,6 +15,11 @@ import tsParser from '@typescript-eslint/parser';
 
 const compat = new FlatCompat();
 
+// bug in eslint globals atm
+// TypeError: Global "AudioWorkletGlobalScope " has leading or trailing whitespace.
+// feel free to delete if linting works without this
+delete globals.browser['AudioWorkletGlobalScope '];
+
 export default [
   js.configs.recommended,
   ...compat.extends('eslint-config-airbnb-typescript'),
@@ -28,6 +34,9 @@ export default [
         ecmaVersion: 'latest',
         ecmaFeatures: { modules: true },
         project: './tsconfig.json',
+      },
+      globals: {
+        ...globals.browser,
       },
     },
     plugins: {

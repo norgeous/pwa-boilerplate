@@ -3,11 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="manifest" href="./manifest.json" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS + Monorepo</title>
+    <title>%{LONGNAME}%</title>
+    <meta property="og:title" content="%{LONGNAME}%" />
+    <meta property="og:description" content="%{DESCRIPTION}%" />
+    <meta property="og:image" content="./unfurl.png" />
+    <style>
+      body{ background: %{BACKGROUNDCOLOR}%; color: %{TEXTCOLOR}%; }
+    </style>
   </head>
   <body>
+    <noscript>
+      <h1>JAVASCRIPT IS NOT ENABLED.<br />Please enable javascript.</h1>
+    </noscript>
+    <h1>%{LONGNAME}%</h1>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script src="./mini-loader.js"></script>
+    <script type="module" src="./src/main.tsx"></script>
+    <div>version: %{VERSION}%</div>
+    <div>EMOJI: %{EMOJI}%</div>
   </body>
 </html>
