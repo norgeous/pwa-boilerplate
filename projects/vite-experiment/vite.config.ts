@@ -1,10 +1,11 @@
 import { defineConfig } from 'vite';
-import viteConfig from '@pwa/vite-config/vite.config';
+import defaultViteConfig from '@pwa/vite-config/default-config';
+import plugins from '@pwa/vite-config/plugins';
 import manifestDestiny from '@pwa/vite-config/manifestDestiny';
 import projectConfig from './project.config';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  ...viteConfig,
-  plugins: [...viteConfig.plugins, manifestDestiny(projectConfig)],
+  ...defaultViteConfig,
+  plugins: [...plugins, manifestDestiny(projectConfig)],
 });

@@ -4,8 +4,11 @@
   "type": "module",
   "types": "./index.d.ts",
   "exports": {
-    "./vite.config": {
-      "import": "./vite.config.js"
+    "./default-config": {
+      "import": "./default-config.js"
+    },
+    "./plugins": {
+      "import": "./plugins.js"
     },
     "./manifestDestiny": {
       "import": "./manifestDestiny.js"
