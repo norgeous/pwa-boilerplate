@@ -17,6 +17,9 @@
     "dev": "npm i && npm run dev -w projects/vite-experiment",
     "build": "npm i && npm run build -w projects/vite-experiment",
     "build:preview": "npm run build:preview -w projects/vite-experiment",
+    "next:dev": "npm i && npm run dev -w projects/next-experiment",
+    "next:build": "npm i && npm run build -w projects/next-experiment",
+    "next:build:preview": "npm run build:preview -w projects/next-experiment",
     "outdated": "npm outdated",
     "lint": "eslint . --fix && prettier --log-level silent --write \"**/*.{js,mdx,md,json,yml}\" && tsc"
   },
