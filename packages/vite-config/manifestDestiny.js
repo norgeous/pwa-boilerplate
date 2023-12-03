@@ -4,11 +4,11 @@ const manifestDestiny = projectConfig =>
   transformPlugin({
     tStart: '%{',
     tEnd: '}%',
-    // replaceFiles: [
-    //   './dist/index.html',
-    //   './dist/manifest.json',
-    //   './dist/favicon.svg',
-    // ],
+    replaceFiles: [
+      './dist/index.html',
+      './dist/manifest.json',
+      './dist/favicon.svg',
+    ],
     replace: projectConfig,
   });
 
