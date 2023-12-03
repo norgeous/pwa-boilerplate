@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:preview": "npx serve dist",
-    "lint": "next lint"
+    "postbuild": "sed -i 's|/BASEPATH/|./|g' ./dist/index.html && rm ./dist/index.txt",
+    "build:preview": "npx serve"
   },
   "dependencies": {
     "react": "^18",
