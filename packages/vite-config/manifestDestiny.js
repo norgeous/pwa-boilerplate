@@ -9,7 +9,7 @@ const projectConfig = {
   BACKGROUNDCOLOR: '#000',
   TEXTCOLOR: '#FFF',
   EMOJI: '🥵',
-  VERSION: '<h1>replaced!</h1>',
+  VERSION: '0.0.0',
 };
 
 const manifestDestiny = () =>
