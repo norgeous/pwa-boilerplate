@@ -25,7 +25,7 @@ export default [
   ...compat.extends('eslint-config-airbnb-typescript'),
   ...compat.extends('eslint-config-prettier'),
   {
-    ignores: ['**/dist'],
+    ignores: ['**/dist', '**/.next'],
   },
   {
     languageOptions: {

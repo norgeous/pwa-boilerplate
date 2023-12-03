@@ -3,7 +3,7 @@ import styles from './page.module.css';
 import CountButton from './CountButton';
 import Button from '@pwa/react-components/Button';
 
-export default function Home() {
+const Home = () => {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
@@ -23,4 +23,6 @@ export default function Home() {
       </div>
     </main>
   );
-}
+};
+
+export default Home;

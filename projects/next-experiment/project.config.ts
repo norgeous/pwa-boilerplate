@@ -1,6 +1,7 @@
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  SHORTNAME: 'Vite App',
-  LONGNAME: 'Vite App - PWA Monorepo',
+  SHORTNAME: 'NextJS App',
+  LONGNAME: 'NextJS App - PWA Monorepo',
   DESCRIPTION: 'Tools for making cool PWAs',
   DISPLAY: 'fullscreen',
   ORIENTATION: 'landscape',
