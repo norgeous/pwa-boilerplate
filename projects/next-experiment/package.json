@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "sed -i 's|/BASEPATH/|./|g' ./dist/index.html && rm ./dist/index.txt",
+    "postbuild": "for f in $(find ./dist); do sed -i 's|/BASEPATH|.|g' $f; done && rm ./dist/index.txt",
     "build:preview": "npx serve"
   },
   "dependencies": {
