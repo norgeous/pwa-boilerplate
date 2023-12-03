@@ -20,5 +20,6 @@ export const ButtonBase = styled.button<ButtonBaseProps>`
   text-decoration: none;
   box-sizing: border-box;
   background: darkcyan;
+  color: black;
   cursor: ${({ $isLoading }) => ($isLoading ? 'wait' : 'pointer')};
 `;
