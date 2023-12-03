@@ -1,6 +1,6 @@
 import transformPlugin from 'vite-plugin-transform';
 
-const projectConfig = {
+export const projectConfig1 = {
   SHORTNAME: 'Monorepo',
   LONGNAME: 'PWA Monorepo',
   DESCRIPTION: 'Tools for making cool PWAs',
@@ -12,15 +12,15 @@ const projectConfig = {
   VERSION: '0.0.0',
 };
 
-const manifestDestiny = () =>
+const manifestDestiny = projectConfig =>
   transformPlugin({
     tStart: '%{',
     tEnd: '}%',
-    replaceFiles: [
-      './dist/index.html',
-      './dist/manifest.json',
-      './dist/favicon.svg',
-    ],
+    // replaceFiles: [
+    //   './dist/index.html',
+    //   './dist/manifest.json',
+    //   './dist/favicon.svg',
+    // ],
     replace: projectConfig,
   });
 
