@@ -11,14 +11,16 @@
     <meta property="og:description" content="%{DESCRIPTION}%" />
     <meta property="og:image" content="./unfurl.png" />
     <style>
-      body{ background: %{BACKGROUNDCOLOR}%; color: %{TEXTCOLOR}%; }
+      :root{
+        background: %{BACKGROUNDCOLOR}%;
+        color: %{TEXTCOLOR}%;
+      }
     </style>
   </head>
   <body>
     <noscript>
       <h1>JAVASCRIPT IS NOT ENABLED.<br />Please enable javascript.</h1>
     </noscript>
-    <h1>%{LONGNAME}%</h1>
     <div id="root"></div>
     <script src="./mini-loader.js"></script>
     <script type="module" src="./src/main.tsx"></script>

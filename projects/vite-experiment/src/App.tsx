@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import Button from '@pwa/react-components/Button';
 import util from '@pwa/react-components/util';
+import projectConfig from '../project.config';
 
 import './App.css';
 
@@ -12,7 +13,7 @@ const App = () => {
 
   return (
     <>
-      <h1>{import.meta.env.VITE_TITLE}</h1>
+      <pre>{JSON.stringify(projectConfig, null, 2)}</pre>
       <Button>Library Button</Button>
       <div className="card">
         <button
