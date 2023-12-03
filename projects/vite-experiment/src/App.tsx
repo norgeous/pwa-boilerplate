@@ -15,15 +15,13 @@ const App = () => {
     <>
       <pre>{JSON.stringify(projectConfig, null, 2)}</pre>
       <Button>Library Button</Button>
-      <div className="card">
-        <button
-          onClick={() => {
-            setCount(oldCount => oldCount + 1);
-          }}
-        >
-          count is {count}
-        </button>
-      </div>
+      <button
+        onClick={() => {
+          setCount(oldCount => oldCount + 1);
+        }}
+      >
+        count is {count}
+      </button>
     </>
   );
 };
