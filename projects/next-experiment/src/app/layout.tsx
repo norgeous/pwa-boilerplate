@@ -13,9 +13,6 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
-      {/* <head>
-        <title>{projectConfig.LONGNAME}</title>
-      </head> */}
       <body className={inter.className}>
         <pre>{JSON.stringify(projectConfig, null, 2)}</pre>
         {children}
