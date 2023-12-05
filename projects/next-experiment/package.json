@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "postbuild": "bash ./postbuild.sh",
-    "build:preview": "npx serve"
+    "build:preview": "npx serve dist"
   },
   "dependencies": {
     "react": "^18",

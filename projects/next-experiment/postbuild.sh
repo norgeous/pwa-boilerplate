@@ -13,4 +13,4 @@ for f in $(find ./dist -type f -name "*.css"); do
 done
 
 # remove pointless file
-rm ./dist/index.txt",
+rm ./dist/index.txt
