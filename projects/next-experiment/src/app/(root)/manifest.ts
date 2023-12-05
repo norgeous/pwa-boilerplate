@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import projectConfig from '../../project.config';
+import projectConfig from '../../../project.config';
 
 const manifest = (): MetadataRoute.Manifest => ({
   short_name: projectConfig.SHORTNAME,

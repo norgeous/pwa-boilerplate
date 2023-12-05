@@ -1,0 +1,18 @@
+import projectConfig from '../../../project.config';
+
+const Icon = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+      width="512"
+      height="512"
+    >
+      <text x="256" y="410" text-anchor="middle" font-size="450">
+        {projectConfig.EMOJI}
+      </text>
+    </svg>
+  );
+};
+
+export default Icon;
